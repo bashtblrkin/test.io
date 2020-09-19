@@ -1040,5 +1040,11 @@ body li {
   .footer__reserved {
     margin-top: 30px;
   }
+  .popup input {
+    width: 300px !important;
+  }
+  .popup .button {
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
