@@ -932,6 +932,10 @@ body li {
   .main-window .navigation__logo {
     margin-top: 10px;
   }
+  .main-window .navigation__logo img {
+    width: 60px;
+    height: 46px;
+  }
   .main-window .navigation__menu {
     display: none;
   }

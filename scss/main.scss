@@ -555,9 +555,7 @@ body {
     outline: none;
 }
 
-@media (max-width: 401px) {
-
-    
+@media (max-width: 401px) { 
 
     .header {
         .phone {
@@ -623,6 +621,10 @@ body {
         .navigation {
             &__logo {
                 margin-top: 10px;
+                img {
+                    width: 60px;
+                    height: 46px;
+                }
             }
             &__menu {
                 display: none;
