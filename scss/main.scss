@@ -607,7 +607,7 @@ body {
     }
 
     .about-us {
-        height: 1100px;
+        height: 790px;
         &__text {
             text-align: center;
             p {
@@ -628,6 +628,13 @@ body {
                     font-size: 31px;    
                 }
             }
+        }
+    }
+
+    .gallery {
+        height: 730px;
+        .fotorama {
+            margin-top: 0px;
         }
     }
 
@@ -673,8 +680,15 @@ body {
         background-size: 70%;
     }
 
+    .features {
+        height: 355px;
+    }
+
     .price {
         height: 380px;
+        &__header {
+            margin-top: 30px;
+        }
         &__form {
             display: flex;
             flex-direction: column;
@@ -684,6 +698,27 @@ body {
         }
         .button {
             margin-top: 15px;
+        }
+    }
+
+    .footer {
+        height: 385px;
+        &__header {
+            margin: 30px 0 30px 0;
+        }
+        &__phone {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        &__contacts {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        &__reserved {
+                margin-top: 30px;
         }
     }
 }

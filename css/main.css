@@ -910,7 +910,7 @@ body li {
     font-size: 28px;
   }
   .about-us {
-    height: 1100px;
+    height: 790px;
   }
   .about-us__text {
     text-align: center;
@@ -930,6 +930,12 @@ body li {
   }
   .about-us__feature p span {
     font-size: 31px;
+  }
+  .gallery {
+    height: 730px;
+  }
+  .gallery .fotorama {
+    margin-top: 0px;
   }
   .slick-slide {
     margin-top: 25px;
@@ -982,8 +988,14 @@ body li {
     background-color: #e61e1e;
     background-size: 70%;
   }
+  .features {
+    height: 355px;
+  }
   .price {
     height: 380px;
+  }
+  .price__header {
+    margin-top: 30px;
   }
   .price__form {
     display: -webkit-box;
@@ -999,6 +1011,34 @@ body li {
   }
   .price .button {
     margin-top: 15px;
+  }
+  .footer {
+    height: 385px;
+  }
+  .footer__header {
+    margin: 30px 0 30px 0;
+  }
+  .footer__phone {
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .footer__contacts {
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__reserved {
+    margin-top: 30px;
   }
 }
 /*# sourceMappingURL=main.css.map */
