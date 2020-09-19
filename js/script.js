@@ -44,6 +44,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     });
 }
 
+$(document).ready(function(){
+    $('.header__burger').click(function(e) {
+            $('.header__burger, .navigation__menu').toggleClass('active');          
+    }); 
+    $('.nav-item').click (function(e) {
+        $('.header__burger.active, .navigation__menu.active').removeClass('active');
+    });
+});
+
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const popupCloseIcon = document.querySelectorAll('.close-popup');
