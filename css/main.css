@@ -912,12 +912,24 @@ body li {
   .about-us {
     height: 1100px;
   }
+  .about-us__text {
+    text-align: center;
+  }
+  .about-us__text p {
+    font-size: 15px;
+  }
   .about-us__picture img {
     width: 100%;
     height: auto;
   }
   .about-us__feature {
     margin-top: 20px;
+  }
+  .about-us__feature p {
+    font-size: 10px;
+  }
+  .about-us__feature p span {
+    font-size: 31px;
   }
   .slick-slide {
     margin-top: 25px;

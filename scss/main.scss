@@ -607,8 +607,13 @@ body {
     }
 
     .about-us {
-        
         height: 1100px;
+        &__text {
+            text-align: center;
+            p {
+                font-size: 15px;
+            }
+        }
         &__picture {
             img {
                 width: 100%;
@@ -617,6 +622,12 @@ body {
         }
         &__feature {
             margin-top: 20px;
+            p {
+                font-size: 10px;
+                span {
+                    font-size: 31px;    
+                }
+            }
         }
     }
 
