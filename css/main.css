@@ -869,6 +869,9 @@ body li {
 }
 
 @media (max-width: 401px) {
+  body.lock {
+    overflow: hidden;
+  }
   .header .phone p {
     font-size: 14px;
   }

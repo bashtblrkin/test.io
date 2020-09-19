@@ -46,7 +46,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 
 $(document).ready(function(){
     $('.header__burger').click(function(e) {
-            $('.header__burger, .navigation__menu').toggleClass('active');          
+            $('.header__burger, .navigation__menu').toggleClass('active');       
+            $('body').toggleClass('lock'); 
     }); 
     $('.nav-item').click (function(e) {
         $('.header__burger.active, .navigation__menu.active').removeClass('active');

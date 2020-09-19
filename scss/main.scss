@@ -556,6 +556,11 @@ body {
 }
 
 @media (max-width: 401px) { 
+    body {
+        &.lock {
+            overflow: hidden;
+        }
+    }
 
     .header {
         .phone {
