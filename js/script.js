@@ -51,6 +51,7 @@ $(document).ready(function(){
     }); 
     $('.nav-item').click (function(e) {
         $('.header__burger.active, .navigation__menu.active').removeClass('active');
+        $('body').removeClass('lock'); 
     });
 });
 

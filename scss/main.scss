@@ -555,7 +555,7 @@ body {
     outline: none;
 }
 
-@media (max-width: 401px) { 
+@media (max-width: 451px) { 
     body {
         &.lock {
             overflow: hidden;
@@ -663,6 +663,17 @@ body {
                             
                         }
                         margin-top: 15px;
+                    }
+                    &-item {
+                        &:hover {
+                            p {
+                                font-family: 'Montserrat_semi_bold';
+                                font-weight: 900;
+                                font-size: 27px;
+                                transform: none;
+                                transition: none;
+                            }
+                        }
                     }
                 }
                 &.active {
@@ -829,6 +840,50 @@ body {
         }
         .button {
             width: 300px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .header {
+        &__info {
+            .phone {
+                p {
+                    font-size: 15px;
+                    &::before {
+                        display:none;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .universal__header {
+        font-size: 23px;
+    }
+
+    .main-window {
+        &__form {
+            input {
+                width: 300px;
+            }
+        }
+    }
+
+    .features {
+        &__item {
+            P {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .price {
+        &__form {
+            input {
+                width: 300px;
+            }
         }
     }
 }

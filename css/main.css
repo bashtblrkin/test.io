@@ -868,7 +868,7 @@ body li {
   outline: none;
 }
 
-@media (max-width: 401px) {
+@media (max-width: 451px) {
   body.lock {
     overflow: hidden;
   }
@@ -978,6 +978,15 @@ body li {
     font-size: 27px;
     margin-left: 20px;
     text-transform: uppercase;
+  }
+  .main-window .navigation__menu .nav-item:hover p {
+    font-family: 'Montserrat_semi_bold';
+    font-weight: 900;
+    font-size: 27px;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transition: none;
+    transition: none;
   }
   .main-window .navigation__menu.active {
     top: 49px;
@@ -1151,6 +1160,27 @@ body li {
     width: 300px !important;
   }
   .popup .button {
+    width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__info .phone p {
+    font-size: 15px;
+  }
+  .header__info .phone p::before {
+    display: none;
+  }
+  .universal__header {
+    font-size: 23px;
+  }
+  .main-window__form input {
+    width: 300px;
+  }
+  .features__item P {
+    font-size: 16px;
+  }
+  .price__form input {
     width: 300px;
   }
 }
