@@ -55,6 +55,45 @@ $(document).ready(function(){
     });
 });
 
+$( document ).ready(function() {
+    $("#btn").click(
+		function(){
+			sendAjaxForm('popup','ajax_form', 'smart.php');
+			return false; 
+		}
+	);
+});
+
+function sendAjaxForm(popup, ajax_form, url) {
+    $.ajax({
+        url:     url, 
+        type:     "POST", 
+        dataType: "html", 
+        data: $("#"+ajax_form).serialize(),  
+        success: function(response) { 
+            if (response == 'true') {
+                $('#'+popup).html('');
+            //     $('.'+popup).html(`<svg id="svg1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+            //     width="94" height="94" viewBox="0 0 47 47"  >
+            //     <title>animation icon -OK-</title> 
+            //           <circle fill="#4CAF50" cx="24" cy="24" r="21"/>
+            //             <path class="path" fill= "none" stroke ="#CCFF90" stroke-width ="1.5" stroke-dasharray= "70.2" stroke-dashoffset="70.2" 
+            //             d="M 34.6 14.6  L 21 28.2 L 15.4 22.6 L 12.6 25.4 L 21 33.8 L 37.4 17.4z">
+            //             <animate id="p1" attributeName="stroke-dashoffset" begin="svg1.click" values="70.2;0" dur="1.5s" repeatCount="1" fill="freeze" calcMode="paced" restart="whenNotActive"/> 
+            //             <animate id="f1" attributeName="fill" begin = "p1.end" values="#4CAF50; #CCFF90"  dur="1s" fill="freeze" restart="whenNotActive" /> 
+            //     </path> 
+            //    </svg>`);
+            }	
+    	},
+    	error: function(response) { // Данные не отправлены
+            // $('#result_form').html('Ошибка. Данные не отправлены.');
+            if (response == 'false') {
+                console.log('false');
+            }
+    	}
+ 	});
+}
+
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const popupCloseIcon = document.querySelectorAll('.close-popup');
