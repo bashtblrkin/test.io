@@ -559,7 +559,7 @@ body {
     .header {
         .phone {
             p {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }
@@ -658,18 +658,32 @@ body {
         width: 2rem;
         height: 2rem;
         border: none;
-      }
-      .prev {
+    }
+    .prev {
         left: 0;
         // background: url(../img/arrow/arrow.svg) center no-repeat;
         mask-image: url(../img/arrow/arrow.svg);
         background-color: $red;
         transform: scale(-1, 1) translate(0, -1rem);
-      }
-      .next {
+    }
+    .next {
         right: 0;
         mask-image: url(../img/arrow/arrow.svg);
         background-color: $red;
         background-size: 70%;
-      }
+    }
+
+    .price {
+        height: 380px;
+        &__form {
+            display: flex;
+            flex-direction: column;
+        }
+        .phone-input {
+            margin-right: 0px;
+        }
+        .button {
+            margin-top: 15px;
+        }
+    }
 }

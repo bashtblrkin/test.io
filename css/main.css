@@ -870,7 +870,7 @@ body li {
 
 @media (max-width: 401px) {
   .header .phone p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .main-window .navigation__logo {
     margin-top: 10px;
@@ -981,6 +981,24 @@ body li {
             mask-image: url(../img/arrow/arrow.svg);
     background-color: #e61e1e;
     background-size: 70%;
+  }
+  .price {
+    height: 380px;
+  }
+  .price__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .price .phone-input {
+    margin-right: 0px;
+  }
+  .price .button {
+    margin-top: 15px;
   }
 }
 /*# sourceMappingURL=main.css.map */
