@@ -995,6 +995,9 @@ body li {
   .gallery .fotorama {
     margin-top: 0px;
   }
+  .gallery .fotorama__nav--dots {
+    margin-top: -20px;
+  }
   .slick-slide {
     margin-top: 25px;
     display: -webkit-box !important;

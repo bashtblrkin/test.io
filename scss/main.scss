@@ -691,6 +691,9 @@ body {
         height: 730px;
         .fotorama {
             margin-top: 0px;
+            &__nav--dots {
+                margin-top: -20px;
+            }
         }
     }
 
