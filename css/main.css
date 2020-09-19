@@ -872,6 +872,64 @@ body li {
   .header .phone p {
     font-size: 14px;
   }
+  .burger__wrap {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .header__burger {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    margin-top: 20px;
+    right: 0;
+  }
+  .header__burger:before, .header__burger:after {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #ffffff;
+    height: 2px;
+    width: 30px;
+    left: 0;
+    top: 9px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger.active:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
   .main-window .navigation__logo {
     margin-top: 10px;
   }
