@@ -496,7 +496,7 @@ body li {
 }
 
 .price__header p {
-  font-size: 26px;
+  font-size: 40px;
   text-transform: uppercase;
   border-bottom: solid 3px #e61e1e;
 }
@@ -1026,7 +1026,7 @@ body li {
   }
   .universal__header {
     margin-top: 30px;
-    font-size: 28px;
+    font-size: 21px;
   }
   .about-us {
     height: 790px;
@@ -1119,6 +1119,9 @@ body li {
   .price__header {
     margin-top: 30px;
   }
+  .price__header p {
+    font-size: 21px;
+  }
   .price__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1135,10 +1138,13 @@ body li {
     margin-top: 15px;
   }
   .footer {
-    height: 385px;
+    height: 370px;
   }
   .footer__header {
     margin: 30px 0 30px 0;
+  }
+  .footer__header p {
+    font-size: 25px;
   }
   .footer__phone {
     margin-top: 15px;
@@ -1149,6 +1155,9 @@ body li {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+  }
+  .footer__phone p {
+    font-size: 20px;
   }
   .footer__contacts {
     margin-top: 15px;
@@ -1178,7 +1187,7 @@ body li {
     display: none;
   }
   .universal__header {
-    font-size: 23px;
+    font-size: 21px;
   }
   .main-window__form input {
     width: 300px;
