@@ -901,7 +901,7 @@ body li {
   }
   .header__burger:before, .header__burger:after {
     content: '';
-    background-color: #ffffff;
+    background-color: #e61e1e;
     position: absolute;
     width: 40px;
     height: 2px;
@@ -917,7 +917,7 @@ body li {
   }
   .header__burger span {
     position: absolute;
-    background-color: #ffffff;
+    background-color: #e61e1e;
     height: 2px;
     width: 40px;
     left: 0;
@@ -1001,13 +1001,13 @@ body li {
     display: none;
   }
   .main-window__header p {
-    font-size: 37px;
+    font-size: 30px;
   }
   .main-window__subtitle .big-text {
-    font-size: 31px;
+    font-size: 25px;
   }
   .main-window__subtitle .small-text {
-    font-size: 15px;
+    font-size: 12px;
   }
   .main-window__form {
     display: -webkit-box;

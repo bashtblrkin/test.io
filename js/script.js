@@ -106,10 +106,12 @@ function sendAjaxForm(popup, ajax_form, url) {
                 setTimeout(resetAjaxForm, 2000);
             }	
     	},
-    	error: function(response) { // Данные не отправлены
-            // $('#result_form').html('Ошибка. Данные не отправлены.');
+    	error: function(response) {
             if (response == 'false') {
-                console.log('false');
+                $('#'+popup).html('');
+                $('#'+popup).html(`
+                <p class="text">Ошибка, временные неполадки! Свяжитесь с нами по телефону указанному на главной странице</p>`);
+                setTimeout(resetAjaxForm, 5000);
             }
     	}
  	});
@@ -143,7 +145,7 @@ if (popupCloseIcon.length > 0) {
 
 function popupOpen(curentPopup, phoneClient='') {
     if (curentPopup) {
-        //curentPopup.querySelector('.input').value = phoneClient;
+        curentPopup.querySelector('.input').value = phoneClient;
         curentPopup.classList.add('open');
         curentPopup.addEventListener('click', function(e) {
             if (!e.target.closest('.popup__content')) {
