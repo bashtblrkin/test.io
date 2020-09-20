@@ -64,10 +64,14 @@ $( document ).ready(function() {
 	);
 });
 
-function resetAjaxForm(popup) {
-    popup.classList.remove('open');
-    popup.html('');
-    popup.html(`
+const popupLinks = document.querySelectorAll('.popup-link');
+const body = document.querySelector('body');
+const popupCloseIcon = document.querySelectorAll('.close-popup');
+
+function resetAjaxForm() {
+    document.querySelector('.popup').classList.remove('open');
+    $('#popup').html('');
+    $('#popup').html(`
         <a href="" class="popup__close close-popup">×</a>
         <div class="popup__title"><p>Оставтье заявку<br> и мы вам перезвоним</p></div>
         <input type="text" id="phone3" name="user_phone"  class="input" placeholder="+7 (___) ___-__-__">
@@ -75,6 +79,8 @@ function resetAjaxForm(popup) {
         <a href="#" class="button" id="btn" ">Позвонить мне</a>
         <div class="popup__subtitle"><p>Подтверждая отправку формы Я соглашаюсь на обработку <br> персональных данных и с политикой конфиденциальности</p></div>
     `);
+    popupCloseIcon = document.querySelectorAll('.close-popup');
+    console.log(popupCloseIcon);
 }
 
 function sendAjaxForm(popup, ajax_form, url) {
@@ -97,7 +103,7 @@ function sendAjaxForm(popup, ajax_form, url) {
                         </path> 
                 </svg>
                 <p class="text">Ваша заявка принята!</p>`);
-                setTimeout(resetAjaxForm, 2000, $('#'+popup));
+                setTimeout(resetAjaxForm, 2000);
             }	
     	},
     	error: function(response) { // Данные не отправлены
@@ -109,9 +115,7 @@ function sendAjaxForm(popup, ajax_form, url) {
  	});
 }
 
-const popupLinks = document.querySelectorAll('.popup-link');
-const body = document.querySelector('body');
-const popupCloseIcon = document.querySelectorAll('.close-popup');
+
 
 if (popupLinks.length > 0) {
     for (let index = 0; index < popupLinks.length; index++) {
@@ -139,7 +143,7 @@ if (popupCloseIcon.length > 0) {
 
 function popupOpen(curentPopup, phoneClient='') {
     if (curentPopup) {
-        curentPopup.querySelector('.input').value = phoneClient;
+        //curentPopup.querySelector('.input').value = phoneClient;
         curentPopup.classList.add('open');
         curentPopup.addEventListener('click', function(e) {
             if (!e.target.closest('.popup__content')) {
