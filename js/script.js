@@ -64,6 +64,19 @@ $( document ).ready(function() {
 	);
 });
 
+function resetAjaxForm(popup) {
+    popup.classList.remove('open');
+    popup.html('');
+    popup.html(`
+        <a href="" class="popup__close close-popup">×</a>
+        <div class="popup__title"><p>Оставтье заявку<br> и мы вам перезвоним</p></div>
+        <input type="text" id="phone3" name="user_phone"  class="input" placeholder="+7 (___) ___-__-__">
+        <input type="text" class="input" name="user_name" placeholder="Ваше имя">
+        <a href="#" class="button" id="btn" ">Позвонить мне</a>
+        <div class="popup__subtitle"><p>Подтверждая отправку формы Я соглашаюсь на обработку <br> персональных данных и с политикой конфиденциальности</p></div>
+    `);
+}
+
 function sendAjaxForm(popup, ajax_form, url) {
     $.ajax({
         url:     url, 
@@ -73,16 +86,18 @@ function sendAjaxForm(popup, ajax_form, url) {
         success: function(response) { 
             if (response == 'true') {
                 $('#'+popup).html('');
-            //     $('.'+popup).html(`<svg id="svg1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-            //     width="94" height="94" viewBox="0 0 47 47"  >
-            //     <title>animation icon -OK-</title> 
-            //           <circle fill="#4CAF50" cx="24" cy="24" r="21"/>
-            //             <path class="path" fill= "none" stroke ="#CCFF90" stroke-width ="1.5" stroke-dasharray= "70.2" stroke-dashoffset="70.2" 
-            //             d="M 34.6 14.6  L 21 28.2 L 15.4 22.6 L 12.6 25.4 L 21 33.8 L 37.4 17.4z">
-            //             <animate id="p1" attributeName="stroke-dashoffset" begin="svg1.click" values="70.2;0" dur="1.5s" repeatCount="1" fill="freeze" calcMode="paced" restart="whenNotActive"/> 
-            //             <animate id="f1" attributeName="fill" begin = "p1.end" values="#4CAF50; #CCFF90"  dur="1s" fill="freeze" restart="whenNotActive" /> 
-            //     </path> 
-            //    </svg>`);
+                $('#'+popup).html(`
+                <svg id="svg1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="94" height="94" viewBox="0 0 47 47"  >
+                        <circle fill="#FFFFFF" cx="24" cy="24" r="21"/>
+                        <path class="path" fill= "none" stroke ="#E61E1E" stroke-width ="1" stroke-dasharray= "70.2" stroke-dashoffset="70.2" 
+                        d="M 34.6 14.6  L 21 28.2 L 15.4 22.6 L 12.6 25.4 L 21 33.8 L 37.4 17.4z">
+                            <animate id="p1" attributeName="stroke-dashoffset" from="0" to="1" values="70.2;0" dur="0.5s" repeatCount="1" fill="freeze" calcMode="paced" restart="whenNotActive"/> 
+                            <animate id="f1" attributeName="fill" begin = "p1.end" values="#A61A1A; #E61E1E"  dur="1s" fill="freeze" restart="whenNotActive" /> 
+                        </path> 
+                </svg>
+                <p class="text">Ваша заявка принята!</p>`);
+                setTimeout(resetAjaxForm, 2000, $('#'+popup));
             }	
     	},
     	error: function(response) { // Данные не отправлены

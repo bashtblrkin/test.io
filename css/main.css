@@ -782,6 +782,7 @@ body li {
 }
 
 .popup__content {
+  text-align: center;
   padding: 30px 30px 30px 30px;
   position: relative;
   background-color: #181818;
@@ -789,6 +790,11 @@ body li {
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
   border-radius: 10px;
+}
+
+.popup__content .text {
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .popup__close {
